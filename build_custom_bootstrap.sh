@@ -8,6 +8,13 @@ export TERMUX_APP_TYPE="f-droid"
 export BOOTSTRAP_ARCHITECTURES="aarch64"
 export TERMUX_GENERATOR_HOME="$(pwd)"
 
+# --- Add missing variables from the original build script ---
+export ADDITIONAL_PACKAGES="xkeyboard-config"
+export DISABLE_BOOTSTRAP_SECOND_STAGE=""
+export ENABLE_SSH_SERVER=""
+export DEFAULT_PASSWORD="changeme"
+
+
 # Switch to the script's directory, which is the repository root in the CI environment.
 cd "$(realpath "$(dirname "$0")")"
 
