@@ -18,6 +18,12 @@ jobs:
 
       # Step 2: Run the build script.
       # This script handles downloading dependencies, applying patches, and building the bootstrap inside a Docker container.
+      # Step 2: Make the custom build script executable.
+      - name: Make script executable
+        run: chmod +x build_custom_bootstrap.sh
+
+      # Step 3: Run the build script.
+      # This script handles downloading dependencies, applying patches, and building the bootstrap inside a Docker container.
       - name: Run custom bootstrap build script
         run: ./build_custom_bootstrap.sh
 
